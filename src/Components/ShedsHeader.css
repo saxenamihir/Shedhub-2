@@ -1,0 +1,155 @@
+.sheds-header {
+  width: 98%;
+  background-color: #f9fafb;
+  padding: 1.5rem;
+}
+
+.container {
+  max-width: 73rem;
+  margin: 0 auto;
+}
+
+/* Header Top Section */
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+/* Title */
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #0f172a;
+  margin: 0;
+}
+
+/* View Controls */
+.view-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.view-label {
+  color: #4b5563;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.view-buttons {
+  display: flex;
+  gap: 0.625rem;
+}
+
+.view-btn {
+  padding: 0.625rem;
+  border: 2px solid transparent;
+  border-radius: 0.5rem;
+  background-color: transparent;
+  color: #9ca3af;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.view-btn:hover {
+  color: #6b7280;
+}
+
+.view-btn.active {
+  background-color: transparent;
+  color: #fb923c;
+  border-color: #fb923c;
+}
+
+.view-btn svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/* Header Bottom Section */
+.header-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Results Count */
+.results-count {
+  color: #4b5563;
+  font-size: 1.125rem;
+  margin: 0;
+}
+
+.results-count .count {
+  font-weight: 600;
+  color: #111827;
+}
+
+/* Sort Controls */
+.sort-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.sort-label {
+  color: #4b5563;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.sort-select {
+  padding: 0.5rem 1rem;
+  background-color: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  color: #111827;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.875rem;
+}
+
+.sort-select:hover {
+  border-color: #9ca3af;
+}
+
+.sort-select:focus {
+  outline: none;
+  border-color: #fb923c;
+  box-shadow: 0 0 0 3px rgba(251, 146, 60, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .header-top,
+  .header-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .view-controls,
+  .sort-controls {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .sheds-header {
+    padding: 1rem;
+  }
+}

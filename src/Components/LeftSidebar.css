@@ -1,0 +1,581 @@
+.search-input-wrapper {
+  position: relative;
+  width: 110%;
+  margin-bottom: 20px;
+  margin-top: 33px;
+  margin-left: 105px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px 50px 12px 20px; /* Increased right padding for icon */
+  border: 2px solid #ffb366;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 400; /* Changed from 500 to 400 for lighter text */
+  outline: none;
+  color: #ffb366;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+}
+
+.search-input::placeholder {
+  color: #ffb366; /* Lighter orange color */
+  opacity: 0.8; /* Slightly transparent */
+  font-weight: 300;
+}
+
+.search-input:focus {
+  border-color: #ff9d3d;
+}
+
+.search-icon {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ffb366;
+  font-size: 18px;
+  pointer-events: none;
+  padding-left: 15px;
+  border-left: 2px solid #ffb366; /* Vertical divider line */
+}
+
+/* ................................................ */
+
+.filter-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  margin-left:-35px;
+  padding-left: 145px;
+}
+
+.filter-icon {
+  color: #ffb366;
+  font-size: 18px;
+}
+
+.filter-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1e3a8a; /* Dark blue color */
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+
+.filter-section {
+  padding-left: 103px;
+  padding-right: 20px;
+  margin-top: 0;
+  padding: 24px 40px 24px 103px;
+  max-width: 750px; 
+}
+
+/* Update this rule in your CSS */
+.filter-section-notify {
+  padding-left: 103px; 
+  padding-right: 0;
+  margin-top: 20px;
+  width: 100%; 
+  box-sizing: border-box;
+}
+
+/* Ensure notify-card is not adding conflicting padding if used */
+.notify-card {
+  padding: 0; /* Remove internal padding if filter-section-notify is meant to handle it */
+}
+
+/* Also remove all padding from notify-section if it's being used as an inner wrapper */
+.notify-section {
+  padding: 0;
+}
+
+.category-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 20px;
+  letter-spacing: -0.01em;
+}
+
+.filter-options {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 100%;
+}
+
+.filter-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 2px 0;
+  transition: opacity 0.2s ease;
+  width: 100%;
+  min-width: 355px; /* Increase from 280px to 320px */
+}
+
+.filter-item:hover {
+  opacity: 0.8;
+}
+
+.filter-item-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  min-width: 0;
+  margin-right: 40px; /* Increase from 16px to 40px for more space */
+}
+
+.filter-checkbox {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #d1d5db;
+  border-radius: 3px;
+  cursor: pointer;
+  appearance: none;
+  background-color: white;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.filter-checkbox:hover {
+  border-color: #9ca3af;
+}
+
+.filter-checkbox:checked {
+  background-color: #fb923c;
+  border-color: #fb923c;
+}
+
+.filter-checkbox:checked::after {
+  content: '✓';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.filter-label {
+  font-size: 15px;
+  color: #334155;
+  cursor: pointer;
+  user-select: none;
+  font-weight: 400;
+  line-height: 1.4;
+  white-space: normal;
+  overflow: visible;
+}
+
+.filter-count {
+  padding: 3px 11px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 600;
+  flex-shrink: 0;
+  min-width: 44px;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+}
+
+.filter-count.default {
+  background-color: #f1f5f9;
+  color: #64748b;
+}
+
+.filter-count.highlight {
+  background-color: #fed7aa;
+  color: #ea580c;
+}
+
+/* Price Range Section */
+.price-range-slider {
+  position: relative;
+  height: 6px;
+  margin: 24px 0 32px 0;
+  width: 210%;
+}
+
+.range-track {
+  position: absolute;
+  width: 100%;
+  height: 6px;
+  background: #1e5a9e;
+  border-radius: 3px;
+  pointer-events: none;
+  top: 0;
+}
+
+.range-input {
+  position: absolute;
+  width: 100%;
+  height: 6px;
+  background: transparent;
+  pointer-events: none;
+  -webkit-appearance: none;
+  appearance: none;
+  top: 0;
+  left: 0;
+}
+
+.range-input::-webkit-slider-track {
+  width: 100%;
+  height: 6px;
+  background: transparent;
+  border: none;
+}
+
+.range-input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #1e5a9e;
+  border: 4px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+  pointer-events: auto;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  margin-top: -7px;
+}
+
+.range-input::-moz-range-track {
+  width: 100%;
+  height: 6px;
+  background: transparent;
+  border: none;
+}
+
+.range-input::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #1e5a9e;
+  border: 4px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+  pointer-events: auto;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+.price-inputs {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.price-input-wrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 18px;
+  border: 1px solid #d1d5db;
+  border-radius: 24px;
+  background: white;
+  min-width: 140px; /* Use min-width instead of max-width */
+}
+
+.price-label {
+  font-size: 14px;
+  color: #64748b;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.price-input-field {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: #334155;
+  background: transparent;
+  min-width: 80px; /* Give the input field enough space */
+  width: 100%;
+  font-weight: 400;
+}
+
+.price-input-field::-webkit-inner-spin-button,
+.price-input-field::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.apply-button {
+  width: 210%;
+  padding: 14px;
+  background: #fb923c;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.apply-button:hover {
+  background: #f97316;
+}
+
+.apply-button:active {
+  background: #ea580c;
+}
+
+
+/* ..............NOTIFY SECTION................... */
+ /* .filter-section-notify {
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+    padding: 20px 0px 20px 80px; 
+    margin: 0;
+}
+
+.notify-inner-card {
+    background-color: #fff;
+    border: 1px solid #e0e6ed;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+    max-width: 340px;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    margin-left: 20px; 
+
+}
+
+.notify-inner-card .notify-header{
+  margin-right: 66px;
+}
+
+.notify-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  margin-right: 0px;
+}
+
+.bell-icon {
+  font-size: 20px;
+  color: #f8a21a; 
+  margin-right: 10px;
+}
+
+.notify-title {
+  color: #f8a21a;
+  font-weight: 700;
+  font-size: 18px;
+  margin: 0;
+}
+
+.notify-description {
+  color: #4a4a4a;
+  font-size: 14px;
+  margin: 10px 0 20px;
+  line-height: 1.5;
+}
+
+.notify-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.email-input {
+  padding: 10px 15px;
+  border: 1px solid #cfd8e3;
+  border-radius: 25px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.email-input:focus {
+  border-color: #f8a21a;
+}
+
+.submit-button {
+  background-color: #f8a21a;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 25px;
+  padding: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #e49010;
+} */
+
+
+/* second */
+/* 
+.notify-inner-card {
+  background-color: #fff;
+  border: 1px solid #cfd8e3;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  padding: 30px 25px;
+  max-width: 400px;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+}
+
+.notify-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.bell-icon {
+  font-size: 22px;
+  color: #f8a21a;
+  margin-right: 8px;
+}
+
+.notify-title {
+  color: #f8a21a;
+  font-weight: 700;
+  font-size: 20px;
+  margin: 0;
+}
+
+.notify-description {
+  color: #1e293b; 
+  font-size: 15px;
+  margin: 10px 0 25px;
+  line-height: 1.6;
+}
+
+.notify-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.email-input {
+  padding: 12px 18px;
+  border: 1px solid #cfd8e3;
+  border-radius: 30px;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.email-input:focus {
+  border-color: #f8a21a;
+}
+
+.submit-button {
+  background-color: #f8a21a;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 0;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #e49010;
+} */
+
+.notify-inner-card {
+  background-color: #fff;
+  border: 1px solid #d1d9e6;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  padding: 30px 30px;
+  width: 310px;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+}
+
+.notify-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.bell-icon {
+  font-size: 20px;
+  color: #f8a21a;
+  margin-right: 6px;
+}
+
+.notify-title {
+  color: #f8a21a;
+  font-weight: 700;
+  font-size: 18px;
+  margin: 0;
+}
+
+.notify-description {
+  color: #334155; /* deep slate gray-blue */
+  font-size: 15px;
+  margin: 12px 0 22px;
+  line-height: 1.6;
+}
+
+.notify-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.email-input {
+  width: 89%;
+  padding: 12px 16px;
+  border: 1px solid #cfd8e3;
+  border-radius: 10px; /* reduced */
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.email-input:focus {
+  border-color: #f8a21a;
+}
+
+.submit-button {
+  width: 100%;
+  background-color: #f8a21a;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px; /* reduced for rectangle look */
+  padding: 12px 0;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #e49010;
+}
+
+

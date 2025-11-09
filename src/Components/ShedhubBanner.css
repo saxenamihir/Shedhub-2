@@ -1,0 +1,160 @@
+.shedhub-banner {
+  background-color: #032b45;
+  color: white;
+  width: 100%;
+  padding: 10px 60px 0 60px; /* ✅ Changed: removed bottom padding */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* ✅ Changed: hide overflow instead of visible */
+}
+
+.shedhub-content {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding-bottom: 0;
+  
+}
+
+/* .shedhub-text {
+  flex: 1;
+  min-width: 280px;
+} */
+
+
+
+.shedhub-text h3 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.shedhub-text p {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.shedhub-images {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  gap: 30px;
+}
+
+.phones-img {
+  max-height: 330px;
+  height: auto;
+  object-fit: contain;
+  transform: translateY(-50px); /* ✅ Changed: reduced from -90px */
+  display: block;
+  margin: 0 auto;
+  margin-bottom: -50px; /* ✅ Added: pulls up the space below the phone */
+  position: relative;
+  z-index: 3;
+
+}
+
+.qr-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  position: relative;
+}
+
+.qr-text-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.qr-section p {
+  font-size: 0.9rem;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.arrow-img {
+  width: 80px;
+  height: auto;
+}
+
+.qr-img {
+  width: 100px;
+  height: 100px;
+}
+
+.store-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px; 
+}
+
+.store-btn {
+  width: 150px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.store-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive - switches to Image 2 layout */
+@media (max-width: 768px) {
+  .qr-section {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .qr-text-wrapper {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .arrow-img {
+    display: none;
+  }
+
+  .qr-img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .store-buttons {
+    flex-direction: row;
+    gap: 15px;
+  }
+
+  .shedhub-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .shedhub-images {
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+  }
+}
+
+.shedhub-images {
+  justify-content: center;
+}
+
+.shedhub-banner {
+  overflow: visible;
+}
+
+.shedhub-text {
+  transform: translateY(-20px);
+}

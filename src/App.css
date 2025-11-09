@@ -1,0 +1,43 @@
+
+.main-two-column-layout {
+  display: flex;
+  justify-content: flex-start; 
+  align-items: flex-start;
+  gap: 20px;
+  padding: 30px 40px; 
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+/* LEFT SIDEBAR - Fixed width instead of flex */
+.left-sidebar-col { 
+   width: 320px; /* Fixed width for sidebar */
+   flex-shrink: 0; /* Prevents shrinking */
+   min-width: 280px;
+}
+
+/* RIGHT CONTENT WRAPPER */
+.right-content-wrapper {
+   flex: 1; /* Takes all remaining space */
+   min-width: 0; /* CRITICAL: allows proper flexbox sizing */
+   display: flex; 
+   flex-direction: column;
+   gap: 20px; /* Space between ShedsHeader and Right */
+}
+
+/* Ensure children components take full width */
+.right-content-wrapper > * {
+    width: 100%;
+}
+
+/* Responsive Stacking */
+@media (max-width: 900px) {
+  .main-two-column-layout {
+    flex-direction: column; 
+    padding: 20px;
+  }
+  
+  .left-sidebar-col {
+    width: 100%;
+  }
+}

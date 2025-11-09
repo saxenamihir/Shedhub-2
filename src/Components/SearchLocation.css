@@ -1,0 +1,52 @@
+.search-location-container {
+  display: flex; /* Makes the input and button align horizontally */
+  align-items: center; /* Vertically centers items */
+  border: 2px solid #ff9900; /* Orange border */
+  border-radius: 25px; /* Rounded corners */
+  padding: 5px 15px; /* Inner padding */
+  background-color: #fff; /* White background */
+  width: 100%; /* Take full width of its parent */
+  max-width: 350px; /* Optional: limit max width */
+  box-sizing: border-box; /* Include padding in width calculation */
+  /* Margin to separate it from other elements, if needed */
+  /* margin-bottom: 20px; */
+}
+
+.search-location-input {
+  flex-grow: 1; /* Allows the input to take up most of the space */
+  border: none; /* Remove default input border */
+  outline: none; /* Remove outline on focus */
+  padding: 8px 0; /* Vertical padding */
+  font-size: 1rem;
+  color: #333; /* Darker text color */
+}
+
+.search-location-input::placeholder {
+  color: #ffaa55; /* Lighter orange for placeholder */
+  opacity: 0.8; /* Make it slightly transparent */
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.search-location-button {
+  background: none; /* No background for the button */
+  border: none; /* No border for the button */
+  color: #ff9900; /* Orange color for the icon */
+  font-size: 1.2rem; /* Size of the magnifying glass */
+  cursor: pointer; /* Indicate it's clickable */
+  padding: 0 5px; /* Horizontal padding for the button */
+  margin-left: 10px; /* Space between input and button */
+  display: flex; /* Use flex to align icon if it were more complex */
+  align-items: center;
+  justify-content: center;
+}
+
+/* Optional: Add a vertical line separator */
+.search-location-button::before {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 25px; /* Height of the line */
+  background-color: #ff9900; /* Orange line color */
+  margin-right: 10px; /* Space between line and icon */
+}
